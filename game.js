@@ -19,6 +19,9 @@ function playRound(playerSelection,computerSelection){
     }
 }
 
-const playerSelection=prompt("Choose Rock, Paper or Scissors")
-console.log(playRound(playerSelection,getComputerChoice()))
+for (let i = 0; i < 5; i++) {
+    const playerSelection=prompt("Choose Rock, Paper or Scissors")
+    console.log(playRound(playerSelection,getComputerChoice()))
+    
+}
    
