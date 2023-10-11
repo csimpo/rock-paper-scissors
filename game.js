@@ -1,15 +1,24 @@
 
-function getComputerChoice(){
- let choice=Math.floor(Math.random()*3)+1
- if(choice===1){
-    choice='Rock'
- }
- else if(choice===2){
-    choice='Paper'
- }
- else{
-    choice='Scissors'
- }
- return choice;
+function getComputerChoice() {
+    const choices = ['Rock', 'Paper', 'Scissors'];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
 }
-console.log(getComputerChoice());
+
+
+
+function playRound(playerSelection,computerSelection){
+    if(playerSelection===computerSelection){
+        return 'Tie round';
+    }
+    else if(playerSelection==='Rock' && computerSelection==='Scissors'){
+        return 'You won'
+    }
+    else{
+        return 'You lost'
+    }
+}
+
+const playerSelection=prompt("Choose Rock, Paper or Scissors")
+console.log(playRound(playerSelection,getComputerChoice()))
+   
